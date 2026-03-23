@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smile Makers Dental Clinic | Dr. Nitin Srivastava | Bareilly</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --blue:#0057A8;
+  --blue-dark:#003D7A;
+  --blue-light:#E8F2FF;
+  --cyan:#00A6D6;
+  --cyan-light:#E0F7FF;
+  --white:#FFFFFF;
+  --off:#F8FAFD;
+  --text:#1A2B3C;
+  --muted:#5A7184;
+  --border:#E0EAF4;
+  --gold:#E8A020;
+  --green:#00B37D;
+  --red:#E84040;
+  --shadow:0 4px 24px rgba(0,87,168,0.10);
+  --shadow-lg:0 16px 48px rgba(0,87,168,0.15);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+/* ─── TOP BAR ─── */
+.topbar{
+  background:var(--blue-dark);
+  color:rgba(255,255,255,0.85);
+  font-size:0.78rem;
+  padding:0.45rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  letter-spacing:0.02em;
+}
+.topbar a{color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.2s;}
+.topbar a:hover{color:#fff;}
+.topbar-left,.topbar-right{display:flex;gap:1.5rem;align-items:center;}
+.topbar span{opacity:0.5;margin:0 0.3rem;}
+
+/* ─── NAV ─── */
+header{
+  position:sticky;top:0;z-index:200;
+  background:#fff;
+  box-shadow:0 2px 16px rgba(0,87,168,0.08);
+}
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;
+  height:72px;
+}
+.logo{display:flex;align-items:center;gap:0.8rem;text-decoration:none;}
+.logo-icon{
+  width:46px;height:46px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;
+  box-shadow:0 4px 12px rgba(0,87,168,0.25);
+}
+.logo-text h1{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--blue-dark);line-height:1.1;}
+.logo-text p{font-size:0.68rem;color:var(--muted);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:0.2rem;list-style:none;}
+.nav-links a{
+  padding:0.5rem 1rem;
+  font-size:0.88rem;font-weight:600;
+  color:var(--text);
+  text-decoration:none;
+  border-radius:8px;
+  transition:all 0.2s;
+  white-space:nowrap;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light);}
+.nav-btn{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff!important;
+  padding:0.6rem 1.4rem!important;
+  border-radius:50px!important;
+  box-shadow:0 4px 14px rgba(0,87,168,0.3);
+  transition:transform 0.2s,box-shadow 0.2s!important;
+  background-clip:padding-box;
+}
+.nav-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,87,168,0.35)!important;background:var(--blue-dark)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--blue);border-radius:2px;transition:all 0.3s;}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(135deg,var(--blue-dark) 0%,#004E96 40%,#006BB8 70%,var(--cyan) 100%);
+  min-height:88vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:5rem 5% 4rem;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-left{position:relative;z-index:1;animation:fadeLeft 0.9s ease both;}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:0.4rem 1rem;border-radius:50px;
+  font-size:0.75rem;font-weight:700;letter-spacing:0.1em;
+  color:rgba(255,255,255,0.9);text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+.star-icon{color:var(--gold);}
+.hero h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem,4.5vw,4rem);
+  font-weight:700;
+  color:#fff;
+  line-height:1.15;
+  margin-bottom:1.2rem;
+}
+.hero h2 span{
+  color:var(--gold);
+  font-style:italic;
+}
+.hero-desc{
+  font-size:1rem;color:rgba(255,255,255,0.8);
+  line-height:1.75;max-width:460px;
+  margin-bottom:2rem;font-weight:400;
+}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.85rem 1.8rem;border-radius:50px;
+  font-size:0.9rem;font-weight:700;text-decoration:none;
+  transition:all 0.3s;cursor:pointer;border:none;
+}
+.btn-white{background:#fff;color:var(--blue-dark);}
+.btn-white:hover{background:var(--gold);color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5);}
+.btn-outline:hover{background:rgba(255,255,255,0.12);border-color:#fff;transform:translateY(-2px);}
+.hero-trust{display:flex;gap:2rem;}
+.trust-item{display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:0.82rem;}
+.trust-icon{font-size:1.2rem;}
+.trust-item strong{color:#fff;display:block;font-size:1rem;}
+
+/* Hero right — floating cards */
+.hero-right{
+  position:relative;z-index:1;
+  display:flex;justify-content:center;align-items:center;
+  padding-left:3rem;
+  animation:fadeRight 0.9s 0.2s ease both;
+}
+.hero-main-card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:28px;
+  padding:2.5rem;
+  width:100%;max-width:360px;
+  text-align:center;
+  color:#fff;
+  position:relative;
+}
+.tooth-anim{font-size:6rem;display:block;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.3));}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-12px) rotate(3deg);}}
+.hero-main-card h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin:0.8rem 0 0.3rem;}
+.hero-main-card p{font-size:0.8rem;opacity:0.75;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.5rem;}
+.rating-row{
+  background:rgba(255,255,255,0.1);border-radius:14px;
+  padding:1rem 1.2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:0.8rem;
+}
+.rating-row .stars{color:var(--gold);font-size:1.1rem;letter-spacing:2px;}
+.rating-row .num{font-size:2rem;font-weight:700;}
+.rating-row small{font-size:0.7rem;opacity:0.65;display:block;}
+.open-row{
+  background:rgba(0,179,125,0.2);
+  border:1px solid rgba(0,179,125,0.4);
+  border-radius:10px;
+  padding:0.6rem 1rem;
+  font-size:0.82rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.pulse-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse 1.5s ease-in-out infinite;flex-shrink:0;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);}}
+
+/* Floating badges */
+.float-badge{
+  position:absolute;
+  background:#fff;border-radius:16px;
+  padding:0.75rem 1rem;
+  box-shadow:var(--shadow-lg);
+  font-size:0.8rem;font-weight:700;color:var(--text);
+  display:flex;align-items:center;gap:0.5rem;
+  animation:floatBadge 4s ease-in-out infinite;
+}
+.float-badge.b1{top:-20px;right:-30px;animation-delay:0s;}
+.float-badge.b2{bottom:20px;left:-40px;animation-delay:1.5s;}
+@keyframes floatBadge{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.float-badge .badge-icon{font-size:1.2rem;}
+.float-badge .badge-text{line-height:1.2;}
+.float-badge .badge-text small{font-weight:400;color:var(--muted);font-size:0.7rem;}
+
+/* ─── TICKER ─── */
+.ticker{
+  background:var(--blue);
+  padding:0.85rem 0;overflow:hidden;
+}
+.ticker-inner{
+  display:flex;gap:0;
+  animation:ticker 25s linear infinite;
+  width:max-content;
+}
+.ticker-item{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0 2.5rem;
+  color:rgba(255,255,255,0.85);
+  font-size:0.82rem;font-weight:600;
+  white-space:nowrap;
+  border-right:1px solid rgba(255,255,255,0.2);
+}
+.ticker-item:last-child{border-right:none;}
+.ticker-item .ti{color:var(--gold);}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ─── SECTION BASE ─── */
+.section{padding:5.5rem 5%;}
+.section-alt{background:var(--off);}
+.sec-label{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--cyan);
+  display:block;margin-bottom:0.7rem;
+}
+.sec-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.9rem,3.5vw,2.8rem);
+  font-weight:700;color:var(--blue-dark);
+  line-height:1.2;margin-bottom:0.8rem;
+}
+.sec-desc{font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:560px;}
+.sec-header{margin-bottom:3.5rem;}
+.sec-header.center{text-align:center;}
+.sec-header.center .sec-desc{margin:0 auto;}
+
+/* ─── WHY US ─── */
+.why-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;
+}
+.why-card{
+  background:#fff;border-radius:20px;
+  padding:2rem 1.5rem;
+  border:1px solid var(--border);
+  text-align:center;
+  transition:all 0.35s;
+  position:relative;overflow:hidden;
+}
+.why-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.35s;
+}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.why-card:hover::after{transform:scaleX(1);}
+.why-icon{
+  width:60px;height:60px;border-radius:16px;
+  background:linear-gradient(135deg,var(--blue-light),var(--cyan-light));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;margin:0 auto 1.2rem;
+}
+.why-card h3{font-size:1rem;font-weight:700;color:var(--blue-dark);margin-bottom:0.5rem;}
+.why-card p{font-size:0.83rem;color:var(--muted);line-height:1.65;}
+
+/* ─── SERVICES ─── */
+.services-layout{display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start;}
+.service-tabs{
+  background:#fff;border-radius:20px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  position:sticky;top:90px;
+}
+.service-tab{
+  display:flex;align-items:center;gap:0.8rem;
+  padding:1rem 1.3rem;
+  font-size:0.88rem;font-weight:600;
+  color:var(--muted);cursor:pointer;
+  border-left:3px solid transparent;
+  transition:all 0.2s;
+  border-bottom:1px solid var(--border);
+}
+.service-tab:last-child{border-bottom:none;}
+.service-tab:hover{color:var(--blue);background:var(--blue-light);}
+.service-tab.active{color:var(--blue);background:var(--blue-light);border-left-color:var(--blue);}
+.service-tab .tab-icon{font-size:1.2rem;flex-shrink:0;}
+.service-panels{}
+.service-panel{display:none;}
+.service-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.srv-card{
+  background:#fff;border-radius:18px;
+  padding:1.8rem;border:1px solid var(--border);
+  transition:all 0.3s;
+}
+.srv-card:hover{border-color:var(--blue);box-shadow:var(--shadow);}
+.srv-icon{font-size:2rem;margin-bottom:0.8rem;}
+.srv-card h4{font-size:1rem;font-weight:700;color:var(--blue-dark);margin-bottom:0.4rem;}
+.srv-card p{font-size:0.82rem;color:var(--muted);line-height:1.6;}
+.srv-tag{
+  display:inline-block;background:var(--blue-light);
+  color:var(--blue);font-size:0.68rem;font-weight:700;
+  padding:0.2rem 0.6rem;border-radius:50px;margin-top:0.8rem;letter-spacing:0.04em;
+}
+
+/* ─── DOCTOR ─── */
+.doctor-section{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.doc-visual{
+  background:linear-gradient(145deg,var(--blue-light),var(--cyan-light));
+  border-radius:32px;
+  min-height:420px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  flex-direction:column;gap:1rem;
+  padding:2.5rem;
+}
+.doc-avatar{
+  width:160px;height:160px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-size:5rem;
+  border:5px solid #fff;
+  box-shadow:0 12px 36px rgba(0,87,168,0.25);
+}
+.doc-name-plate{
+  background:#fff;border-radius:16px;
+  padding:1rem 1.5rem;text-align:center;
+  box-shadow:var(--shadow);
+  width:100%;
+}
+.doc-name-plate h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--blue-dark);font-weight:700;}
+.doc-name-plate p{font-size:0.8rem;color:var(--muted);font-weight:600;letter-spacing:0.04em;}
+.doc-name-plate .rating-mini{color:var(--gold);font-size:0.85rem;margin-top:0.3rem;}
+.doc-info h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--blue-dark);line-height:1.2;margin-bottom:1rem;}
+.doc-info p{font-size:0.93rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;}
+.doc-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:2rem;}
+.doc-hl{
+  display:flex;align-items:flex-start;gap:0.6rem;
+  background:var(--off);border-radius:12px;padding:0.8rem;
+}
+.doc-hl .icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.doc-hl p{font-size:0.8rem;color:var(--text);font-weight:600;margin:0;}
+
+/* ─── APPOINTMENT ─── */
+.appt-section{
+  background:linear-gradient(135deg,var(--blue-dark),#005AA3);
+  padding:5.5rem 5%;
+  position:relative;overflow:hidden;
+}
+.appt-section::before{
+  content:'🦷';font-size:25rem;
+  position:absolute;right:-5rem;top:50%;transform:translateY(-50%);
+  opacity:0.04;pointer-events:none;
+}
+.appt-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center;}
+.appt-info .sec-title{color:#fff;}
+.appt-info .sec-label{color:rgba(255,255,255,0.6);}
+.appt-info p{color:rgba(255,255,255,0.75);font-size:0.93rem;line-height:1.8;margin-bottom:2rem;}
+.appt-contact{display:flex;flex-direction:column;gap:1rem;}
+.contact-item{
+  display:flex;align-items:center;gap:0.9rem;
+  background:rgba(255,255,255,0.1);border-radius:14px;
+  padding:1rem 1.2rem;
+  border:1px solid rgba(255,255,255,0.15);
+}
+.contact-item .ci-icon{font-size:1.4rem;}
+.contact-item h4{font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.15rem;}
+.contact-item p{font-size:0.82rem;color:rgba(255,255,255,0.7);margin:0;}
+.appt-form{
+  background:#fff;border-radius:24px;
+  padding:2.5rem;
+  box-shadow:0 24px 64px rgba(0,0,0,0.25);
+}
+.appt-form h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--blue-dark);margin-bottom:1.5rem;font-weight:700;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;}
+.form-group label{font-size:0.8rem;font-weight:700;color:var(--text);letter-spacing:0.03em;}
+.form-group input,.form-group select,.form-group textarea{
+  padding:0.8rem 1rem;
+  border:2px solid var(--border);border-radius:12px;
+  font-size:0.88rem;font-family:'Nunito',sans-serif;color:var(--text);
+  outline:none;transition:border-color 0.2s;background:#fff;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);}
+.form-group textarea{resize:vertical;min-height:90px;}
+.form-submit{
+  width:100%;padding:1rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff;font-size:0.95rem;font-weight:700;
+  border:none;border-radius:12px;cursor:pointer;
+  font-family:'Nunito',sans-serif;
+  transition:all 0.3s;
+  display:flex;align-items:center;justify-content:center;gap:0.5rem;
+}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,87,168,0.35);}
+.form-note{font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.8rem;}
+
+/* ─── TESTIMONIALS ─── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.testi-card{
+  background:#fff;border-radius:20px;
+  padding:2rem;border:1px solid var(--border);
+  transition:all 0.3s;
+  position:relative;
+}
+.testi-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+.quote-mark{
+  font-size:4rem;font-family:Georgia,serif;
+  color:var(--blue-light);line-height:1;
+  position:absolute;top:1rem;right:1.5rem;font-weight:700;
+}
+.testi-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:0.8rem;}
+.testi-card blockquote{
+  font-size:0.9rem;color:var(--text);line-height:1.7;
+  font-style:italic;margin-bottom:1.2rem;
+  border-left:3px solid var(--cyan);padding-left:0.8rem;
+}
+.testi-author{display:flex;align-items:center;gap:0.7rem;}
+.testi-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0;
+}
+.testi-author h4{font-size:0.85rem;font-weight:700;color:var(--blue-dark);}
+.testi-author p{font-size:0.72rem;color:var(--muted);}
+.google-g{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  background:var(--blue-light);color:var(--blue);
+  font-size:0.68rem;font-weight:700;padding:0.2rem 0.6rem;
+  border-radius:50px;margin-top:0.3rem;
+}
+
+/* ─── GALLERY ─── */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:auto auto;
+  gap:1rem;
+}
+.gal-item{
+  border-radius:16px;overflow:hidden;
+  background:linear-gradient(135deg,var(--blue-light),var(--cyan-light));
+  min-height:160px;display:flex;align-items:center;justify-content:center;
+  font-size:3rem;cursor:pointer;
+  transition:transform 0.3s;
+  position:relative;
+}
+.gal-item:hover{transform:scale(1.03);}
+.gal-item:first-child{grid-column:1/3;grid-row:1/2;min-height:220px;}
+.gal-label{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);
+  padding:1rem 0.8rem 0.7rem;
+  color:#fff;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.04em;
+}
+
+/* ─── LOCATIONS ─── */
+.location-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start;}
+.location-card{
+  background:#fff;border-radius:24px;
+  padding:2.5rem;border:1px solid var(--border);
+}
+.location-card h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--blue-dark);margin-bottom:1.5rem;}
+.loc-row{
+  display:flex;align-items:flex-start;gap:0.9rem;
+  padding:1rem 0;border-bottom:1px solid var(--border);
+}
+.loc-row:last-child{border-bottom:none;}
+.loc-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--blue-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+}
+.loc-row h4{font-size:0.85rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;}
+.loc-row p{font-size:0.82rem;color:var(--muted);line-height:1.55;}
+.loc-row a{color:var(--blue);text-decoration:none;font-weight:600;}
+.map-placeholder{
+  border-radius:24px;overflow:hidden;
+  background:linear-gradient(135deg,#E8F2FF,#E0F7FF);
+  min-height:380px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1rem;
+  border:2px dashed var(--border);
+}
+.map-placeholder .map-icon{font-size:4rem;}
+.map-placeholder h3{font-size:1.1rem;font-weight:700;color:var(--blue-dark);}
+.map-placeholder p{font-size:0.82rem;color:var(--muted);text-align:center;max-width:220px;}
+.map-link{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--blue);color:#fff;
+  padding:0.7rem 1.4rem;border-radius:50px;
+  text-decoration:none;font-size:0.85rem;font-weight:700;
+  transition:background 0.2s;
+}
+.map-link:hover{background:var(--blue-dark);}
+
+/* ─── FOOTER ─── */
+footer{background:#0A1929;color:rgba(255,255,255,0.65);padding:4rem 5% 2rem;}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:3rem;
+  margin-bottom:3rem;padding-bottom:3rem;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .logo-text h1{color:#fff;font-size:1.1rem;}
+.footer-brand p{font-size:0.83rem;line-height:1.75;margin:1rem 0 1.5rem;color:rgba(255,255,255,0.5);}
+.footer-social{display:flex;gap:0.7rem;}
+.social-btn{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(255,255,255,0.08);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;text-decoration:none;
+  transition:background 0.2s;cursor:pointer;
+}
+.social-btn:hover{background:var(--blue);}
+.footer-col h4{font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:1.2rem;letter-spacing:0.04em;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.65rem;}
+.footer-col ul a{font-size:0.82rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.footer-col ul a:hover{color:#fff;}
+.footer-hours{display:flex;flex-direction:column;gap:0.5rem;}
+.hour-row{display:flex;justify-content:space-between;font-size:0.8rem;}
+.hour-row span:first-child{color:rgba(255,255,255,0.5);}
+.hour-row span:last-child{color:#fff;font-weight:600;}
+.open-now{color:var(--green)!important;font-weight:700!important;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;}
+.footer-bottom strong{color:rgba(255,255,255,0.8);}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-30px);}to{opacity:1;transform:translateX(0);}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ─── MOBILE ─── */
+@media(max-width:1024px){
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .services-layout{grid-template-columns:1fr;}
+  .service-tabs{position:relative;top:0;display:flex;overflow-x:auto;border-radius:14px;}
+  .service-tab{border-left:none;border-bottom:3px solid transparent;white-space:nowrap;}
+  .service-tab.active{border-bottom-color:var(--blue);border-left:none;}
+  .service-panel.active{grid-template-columns:1fr;}
+  .doctor-section,.appt-layout,.location-grid{grid-template-columns:1fr;}
+  .appt-section::before{display:none;}
+  .testi-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .gal-item:first-child{grid-column:auto;grid-row:auto;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .topbar{display:none;}
+  .hamburger{display:flex;}
+  .nav-links{
+    display:none;position:absolute;top:72px;left:0;right:0;
+    background:#fff;flex-direction:column;padding:1rem;
+    box-shadow:0 8px 24px rgba(0,0,0,0.1);gap:0;
+  }
+  .nav-links.open{display:flex;}
+  .hero{grid-template-columns:1fr;padding:4rem 5% 3rem;min-height:auto;}
+  .hero-right{display:none;}
+  .why-grid,.testi-grid,.footer-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .section{padding:3.5rem 5%;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:05814023855">📞 0581 402 3855</a>
+    <span>|</span>
+    <span>📍 Pilibhit Bypass Rd, Bareilly, UP</span>
+  </div>
+  <div class="topbar-right">
+    <span>🕐 Open Today · Closes 9:00 PM</span>
+    <span>|</span>
+    <a href="#appointment">Book Free Consultation</a>
+  </div>
+</div>
+
+<!-- HEADER / NAV -->
+<header>
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">🦷</div>
+      <div class="logo-text">
+        <h1>Smile Makers</h1>
+        <p>Dental Clinic · Bareilly</p>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Doctor</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:05814023855" class="nav-btn">📞 Call Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <span class="star-icon">★</span> Bareilly's Most Trusted Dental Clinic
+    </div>
+    <h2>Your Smile is Our<br><span>Passion &amp; Pride</span></h2>
+    <p class="hero-desc">
+      Dr. Nitin Srivastava's Smile Makers Dental Clinic offers all types of dental treatments with state-of-the-art equipment, a sterile environment, and a patient-first approach.
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:05814023855" class="btn btn-white">📞 Call: 0581 402 3855</a>
+      <a href="#appointment" class="btn btn-outline">Book Appointment →</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <span class="trust-icon">⭐</span>
+        <div><strong>5.0 Stars</strong>Google Rating</div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✅</span>
+        <div><strong>100%</strong>Satisfaction</div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🏥</span>
+        <div><strong>All</strong>Treatments</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-main-card">
+      <span class="tooth-anim">🦷</span>
+      <h3>Dr. Nitin Srivastava</h3>
+      <p>Smile Makers Dental Clinic</p>
+      <div class="rating-row">
+        <div>
+          <div class="stars">★★★★★</div>
+          <small>Google Reviews</small>
+        </div>
+        <div class="num">5.0</div>
+      </div>
+      <div class="open-row">
+        <div class="pulse-dot"></div>
+        Open Now &nbsp;·&nbsp; Closes 9:00 PM
+      </div>
+      <div class="float-badge b1">
+        <span class="badge-icon">🏆</span>
+        <div class="badge-text">Top Rated<br><small>Bareilly Dentist</small></div>
+      </div>
+      <div class="float-badge b2">
+        <span class="badge-icon">💉</span>
+        <div class="badge-text">Pain Free<br><small>Treatment</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-item"><span class="ti">🦷</span> General Dentistry</div>
+    <div class="ticker-item"><span class="ti">✨</span> Teeth Whitening</div>
+    <div class="ticker-item"><span class="ti">👑</span> Crowns &amp; Bridges</div>
+    <div class="ticker-item"><span class="ti">🔬</span> Root Canal Treatment</div>
+    <div class="ticker-item"><span class="ti">📐</span> Orthodontics &amp; Braces</div>
+    <div class="ticker-item"><span class="ti">🌟</span> Dental Implants</div>
+    <div class="ticker-item"><span class="ti">😁</span> Smile Makeover</div>
+    <div class="ticker-item"><span class="ti">🧹</span> Scaling &amp; Cleaning</div>
+    <!-- duplicate -->
+    <div class="ticker-item"><span class="ti">🦷</span> General Dentistry</div>
+    <div class="ticker-item"><span class="ti">✨</span> Teeth Whitening</div>
+    <div class="ticker-item"><span class="ti">👑</span> Crowns &amp; Bridges</div>
+    <div class="ticker-item"><span class="ti">🔬</span> Root Canal Treatment</div>
+    <div class="ticker-item"><span class="ti">📐</span> Orthodontics &amp; Braces</div>
+    <div class="ticker-item"><span class="ti">🌟</span> Dental Implants</div>
+    <div class="ticker-item"><span class="ti">😁</span> Smile Makeover</div>
+    <div class="ticker-item"><span class="ti">🧹</span> Scaling &amp; Cleaning</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="section section-alt" id="why">
+  <div class="sec-header center">
+    <span class="sec-label">Why Choose Us</span>
+    <h2 class="sec-title">The Smile Makers Difference</h2>
+    <p class="sec-desc">We combine advanced dental technology with genuine care to deliver results you'll love — and an experience you'll remember for all the right reasons.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🏆</div>
+      <h3>5.0 Star Rated</h3>
+      <p>Consistently top-rated on Google by real patients who trust us with their smiles.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <h3>Advanced Equipment</h3>
+      <p>Best-in-class dental technology for precise diagnostics and comfortable treatments.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🧼</div>
+      <h3>Sterile Environment</h3>
+      <p>International sterilization standards — your safety is our highest priority.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">😌</div>
+      <h3>Painless Procedures</h3>
+      <p>Modern techniques and gentle care make every visit comfortable and stress-free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="sec-header">
+    <span class="sec-label">Our Treatments</span>
+    <h2 class="sec-title">Complete Dental Care<br>Under One Roof</h2>
+  </div>
+  <div class="services-layout">
+    <div class="service-tabs">
+      <div class="service-tab active" onclick="switchTab(0,this)"><span class="tab-icon">🦷</span> General Dentistry</div>
+      <div class="service-tab" onclick="switchTab(1,this)"><span class="tab-icon">✨</span> Cosmetic Dentistry</div>
+      <div class="service-tab" onclick="switchTab(2,this)"><span class="tab-icon">📐</span> Orthodontics</div>
+      <div class="service-tab" onclick="switchTab(3,this)"><span class="tab-icon">🌟</span> Restorative</div>
+      <div class="service-tab" onclick="switchTab(4,this)"><span class="tab-icon">👶</span> Pediatric</div>
+    </div>
+    <div class="service-panels">
+      <!-- Panel 0 -->
+      <div class="service-panel active">
+        <div class="srv-card"><div class="srv-icon">🔍</div><h4>Dental Check-up</h4><p>Comprehensive oral examination, X-rays, and preventive advice to catch issues early.</p><span class="srv-tag">Preventive</span></div>
+        <div class="srv-card"><div class="srv-icon">💊</div><h4>Tooth Extraction</h4><p>Painless and safe extractions of damaged or wisdom teeth with proper aftercare.</p><span class="srv-tag">Surgical</span></div>
+        <div class="srv-card"><div class="srv-icon">🧹</div><h4>Scaling &amp; Cleaning</h4><p>Professional removal of plaque and tartar to prevent gum disease and freshen breath.</p><span class="srv-tag">Hygiene</span></div>
+        <div class="srv-card"><div class="srv-icon">🔬</div><h4>Root Canal Treatment</h4><p>Advanced RCT to save infected teeth — painless procedure with modern rotary tools.</p><span class="srv-tag">Endodontic</span></div>
+      </div>
+      <!-- Panel 1 -->
+      <div class="service-panel">
+        <div class="srv-card"><div class="srv-icon">✨</div><h4>Teeth Whitening</h4><p>Professional in-office whitening that brightens your smile by several shades in one session.</p><span class="srv-tag">Aesthetic</span></div>
+        <div class="srv-card"><div class="srv-icon">😁</div><h4>Smile Makeover</h4><p>Full smile transformation combining multiple cosmetic treatments for a stunning result.</p><span class="srv-tag">Cosmetic</span></div>
+        <div class="srv-card"><div class="srv-icon">💎</div><h4>Dental Veneers</h4><p>Thin porcelain shells that correct chips, stains, and irregular shapes for a perfect smile.</p><span class="srv-tag">Cosmetic</span></div>
+        <div class="srv-card"><div class="srv-icon">🎨</div><h4>Composite Bonding</h4><p>Tooth-colored resin to repair minor chips, cracks, and gaps quickly and affordably.</p><span class="srv-tag">Restorative</span></div>
+      </div>
+      <!-- Panel 2 -->
+      <div class="service-panel">
+        <div class="srv-card"><div class="srv-icon">📐</div><h4>Metal Braces</h4><p>Traditional metal braces for effective correction of misaligned teeth and bite issues.</p><span class="srv-tag">Orthodontic</span></div>
+        <div class="srv-card"><div class="srv-icon">🔷</div><h4>Ceramic Braces</h4><p>Tooth-colored ceramic brackets for a less visible, more aesthetic orthodontic solution.</p><span class="srv-tag">Aesthetic</span></div>
+        <div class="srv-card"><div class="srv-icon">🌀</div><h4>Clear Aligners</h4><p>Nearly invisible removable aligners to straighten teeth comfortably and discreetly.</p><span class="srv-tag">Premium</span></div>
+        <div class="srv-card"><div class="srv-icon">📏</div><h4>Retainers</h4><p>Post-treatment retainers to maintain your perfect smile alignment long-term.</p><span class="srv-tag">Maintenance</span></div>
+      </div>
+      <!-- Panel 3 -->
+      <div class="service-panel">
+        <div class="srv-card"><div class="srv-icon">👑</div><h4>Dental Crowns</h4><p>Precision-crafted crowns that restore damaged teeth to full function and aesthetics.</p><span class="srv-tag">Restorative</span></div>
+        <div class="srv-card"><div class="srv-icon">🌉</div><h4>Dental Bridges</h4><p>Fixed bridges that replace missing teeth and restore your bite and natural appearance.</p><span class="srv-tag">Prosthetic</span></div>
+        <div class="srv-card"><div class="srv-icon">🌟</div><h4>Dental Implants</h4><p>Permanent titanium implants — the gold standard for replacing missing teeth naturally.</p><span class="srv-tag">Premium</span></div>
+        <div class="srv-card"><div class="srv-icon">🦷</div><h4>Dentures</h4><p>Full and partial dentures custom-fitted for comfort, function, and a natural look.</p><span class="srv-tag">Prosthetic</span></div>
+      </div>
+      <!-- Panel 4 -->
+      <div class="service-panel">
+        <div class="srv-card"><div class="srv-icon">👶</div><h4>Milk Teeth Care</h4><p>Gentle care for children's primary teeth — building healthy habits from an early age.</p><span class="srv-tag">Pediatric</span></div>
+        <div class="srv-card"><div class="srv-icon">🪥</div><h4>Fluoride Treatment</h4><p>Preventive fluoride application to strengthen enamel and protect against cavities.</p><span class="srv-tag">Preventive</span></div>
+        <div class="srv-card"><div class="srv-icon">🛡️</div><h4>Pit &amp; Fissure Sealants</h4><p>Protective sealants on molars to prevent cavities in children and young adults.</p><span class="srv-tag">Preventive</span></div>
+        <div class="srv-card"><div class="srv-icon">😊</div><h4>Child-Friendly Approach</h4><p>A fun, comfortable, fear-free environment that children actually enjoy visiting.</p><span class="srv-tag">Special Care</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="section section-alt" id="about">
+  <div class="doctor-section">
+    <div class="doc-visual">
+      <div class="doc-avatar">👨‍⚕️</div>
+      <div class="doc-name-plate">
+        <h3>Dr. Nitin Srivastava</h3>
+        <p>BDS · Smile Makers Dental Clinic</p>
+        <div class="rating-mini">★★★★★ &nbsp; 5.0 on Google</div>
+      </div>
+    </div>
+    <div class="doc-info">
+      <span class="sec-label">Meet Your Doctor</span>
+      <h2>Committed to Your<br>Perfect Smile</h2>
+      <p>Dr. Nitin Srivastava is a highly skilled and dedicated dental professional based in Bareilly, Uttar Pradesh. With years of clinical experience, he has built a reputation for delivering exceptional dental care with precision, compassion, and the latest techniques.</p>
+      <p>His philosophy is simple: every patient deserves 100% satisfaction, world-class treatment, and a clean, safe environment. That's exactly what Smile Makers Dental Clinic delivers — every single day.</p>
+      <div class="doc-highlights">
+        <div class="doc-hl"><span class="icon">🎓</span><p>Qualified BDS Dental Surgeon</p></div>
+        <div class="doc-hl"><span class="icon">⚙️</span><p>State-of-the-Art Equipment</p></div>
+        <div class="doc-hl"><span class="icon">🧼</span><p>Strict Sterilization Protocols</p></div>
+        <div class="doc-hl"><span class="icon">😌</span><p>Gentle &amp; Painless Techniques</p></div>
+        <div class="doc-hl"><span class="icon">🏆</span><p>5.0 Star Google Rating</p></div>
+        <div class="doc-hl"><span class="icon">✅</span><p>100% Patient Satisfaction</p></div>
+      </div>
+      <a href="tel:05814023855" class="btn" style="background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;width:fit-content;">📞 Book with Dr. Srivastava</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="appt-section" id="appointment">
+  <div class="appt-layout">
+    <div class="appt-info">
+      <span class="sec-label">Get In Touch</span>
+      <h2 class="sec-title">Book Your Appointment Today</h2>
+      <p>Don't wait for dental problems to worsen. Schedule a visit with Dr. Nitin Srivastava and take the first step toward a healthier, brighter smile.</p>
+      <div class="appt-contact">
+        <div class="contact-item">
+          <span class="ci-icon">📞</span>
+          <div><h4>Call Us Directly</h4><p>0581 402 3855</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">📍</span>
+          <div><h4>Our Location</h4><p>Shop No.4, Tulip Grand Apartments, Pilibhit Bypass Rd, Bareilly — 243006</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">🕐</span>
+          <div><h4>Clinic Hours</h4><p>Open Daily · Closes 9:00 PM</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="appt-form">
+      <h3>Request an Appointment</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <select>
+            <option>Morning (10 AM – 1 PM)</option>
+            <option>Afternoon (2 PM – 5 PM)</option>
+            <option>Evening (5 PM – 9 PM)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Treatment Needed</label>
+        <select>
+          <option>General Check-up</option>
+          <option>Root Canal Treatment</option>
+          <option>Teeth Whitening</option>
+          <option>Dental Implants</option>
+          <option>Braces / Aligners</option>
+          <option>Crowns &amp; Bridges</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Additional Message</label>
+        <textarea placeholder="Describe your dental concern (optional)..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(this)">
+        📅 &nbsp; Confirm Appointment Request
+      </button>
+      <p class="form-note">✅ We'll call you within 2 hours to confirm your appointment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="sec-header center">
+    <span class="sec-label">Patient Reviews</span>
+    <h2 class="sec-title">What Our Patients Say</h2>
+    <p class="sec-desc">Real experiences from real patients who trust Dr. Nitin Srivastava with their smiles.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"100% customer satisfaction with best equipments and clean clinical environment. Highly recommend to everyone in Bareilly!"</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <h4>Amit Kumar</h4>
+          <p>Bareilly, UP</p>
+          <div class="google-g">🔵 Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"Good Doctor &amp; Work done by him very well. My root canal was completely painless. Very professional and caring staff."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div>
+          <h4>Renu Sharma</h4>
+          <p>Mahanagar Colony, Bareilly</p>
+          <div class="google-g">🔵 Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"Best dental clinic in Bareilly. The equipment is top-notch and the environment is super clean. Dr. Srivastava is very knowledgeable."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div>
+          <h4>Suresh Gupta</h4>
+          <p>Pilibhit Bypass Area</p>
+          <div class="google-g">🔵 Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section-alt">
+  <div class="sec-header center">
+    <span class="sec-label">Our Clinic</span>
+    <h2 class="sec-title">Clinic Gallery</h2>
+    <p class="sec-desc">State-of-the-art facility designed for your comfort and safety.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gal-item" style="background:linear-gradient(135deg,#E8F2FF,#C8E6FF);">
+      🏥
+      <div class="gal-label">Reception Area</div>
+    </div>
+    <div class="gal-item" style="background:linear-gradient(135deg,#E0F7FF,#B8EFFF);">
+      🪑
+      <div class="gal-label">Treatment Chair</div>
+    </div>
+    <div class="gal-item" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2);">
+      ⚙️
+      <div class="gal-label">Advanced Equipment</div>
+    </div>
+    <div class="gal-item" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);">
+      🧼
+      <div class="gal-label">Sterilization Unit</div>
+    </div>
+    <div class="gal-item" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0);">
+      😁
+      <div class="gal-label">Before &amp; After</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section" id="contact">
+  <div class="sec-header">
+    <span class="sec-label">Find Us</span>
+    <h2 class="sec-title">Visit Our Clinic</h2>
+  </div>
+  <div class="location-grid">
+    <div class="location-card">
+      <h3>Clinic Information</h3>
+      <div class="loc-row">
+        <div class="loc-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>Shop No. 4, First Floor, Tulip Grand Apartments,<br>Pilibhit Bypass Rd, Utsav Phase 1,<br>Mahanagar Colony, Bareilly — 243006</p>
+        </div>
+      </div>
+      <div class="loc-row">
+        <div class="loc-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:05814023855">0581 402 3855</a></p>
+        </div>
+      </div>
+      <div class="loc-row">
+        <div class="loc-icon">🕐</div>
+        <div>
+          <h4>Clinic Hours</h4>
+          <p>Open Daily &nbsp;·&nbsp; Closes 9:00 PM</p>
+          <p style="color:var(--green);font-weight:700;font-size:0.82rem;margin-top:0.3rem;">🟢 Open Now</p>
+        </div>
+      </div>
+      <div class="loc-row">
+        <div class="loc-icon">🚗</div>
+        <div>
+          <h4>Distance</h4>
+          <p>~17 minutes from Bareilly City Centre<br>Easy parking available nearby</p>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <a href="https://maps.google.com/?q=Tulip+Grand+Apartments+Pilibhit+Bypass+Bareilly" target="_blank" class="map-link">🗺 Open in Google Maps</a>
+      </div>
+    </div>
+    <div class="map-placeholder">
+      <div class="map-icon">📍</div>
+      <h3>Smile Makers Dental Clinic</h3>
+      <p>Tulip Grand Apartments, Pilibhit Bypass Rd, Bareilly, UP 243006</p>
+      <a href="https://maps.google.com/?q=Tulip+Grand+Apartments+Pilibhit+Bypass+Bareilly" target="_blank" class="map-link">🗺 Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:0.5rem;">
+        <div class="logo-icon" style="width:40px;height:40px;font-size:1.3rem;">🦷</div>
+        <div class="logo-text">
+          <h1>Smile Makers</h1>
+          <p style="color:rgba(255,255,255,0.4);">Dental Clinic · Bareilly</p>
+        </div>
+      </div>
+      <p>Providing all types of dental treatments with state-of-the-art equipment, a sterile environment, and 100% patient satisfaction. Bareilly's trusted smile destination.</p>
+      <div class="footer-social">
+        <div class="social-btn">📘</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶️</div>
+        <div class="social-btn">🔍</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#about">About Doctor</a></li>
+        <li><a href="#testimonials">Patient Reviews</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Treatments</h4>
+      <ul>
+        <li><a href="#services">Root Canal Treatment</a></li>
+        <li><a href="#services">Teeth Whitening</a></li>
+        <li><a href="#services">Dental Implants</a></li>
+        <li><a href="#services">Braces &amp; Aligners</a></li>
+        <li><a href="#services">Crowns &amp; Bridges</a></li>
+        <li><a href="#services">Smile Makeover</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Clinic Hours</h4>
+      <div class="footer-hours">
+        <div class="hour-row"><span>Monday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Tuesday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Wednesday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Thursday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Friday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Saturday</span><span class="open-now">Open · 9PM</span></div>
+        <div class="hour-row"><span>Sunday</span><span class="open-now">Open · 9PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <strong>Dr. Nitin Srivastava's Smile Makers Dental Clinic</strong> · Bareilly, UP. All rights reserved.</span>
+    <span>Made with ❤️ for better smiles</span>
+  </div>
+</footer>
+
+<script>
+// Tab switching
+function switchTab(idx, el) {
+  document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.service-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.service-panel')[idx].classList.add('active');
+}
+
+// Form submit
+function handleSubmit(btn) {
+  const orig = btn.innerHTML;
+  btn.innerHTML = '⏳ &nbsp; Submitting...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.innerHTML = '✅ &nbsp; Appointment Requested! We\'ll Call You Soon.';
+    btn.style.background = 'var(--green)';
+    setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; }, 4000);
+  }, 1500);
+}
+
+// Smooth active nav link
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
